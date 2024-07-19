@@ -16,17 +16,21 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M:%S')"
+
       - name: Download IP ranges
         run: |
           set -x
-          bash aws/download.sh
+          bash amazon/download.sh
           bash digitalocean/download.sh
           bash cloudflare/download.sh
 
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'Apply automatic updates'
+          commit_message: 'Apply automatic updates: ${{ steps.date.outputs.date }}'
           commit_options: '--no-verify'
           repository: '.'
           file_pattern: '*/*.txt'
