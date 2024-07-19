@@ -10,7 +10,7 @@ TMP_FILE="${TMP_DIR}/amazon.json"
 TMP_IPv4_FILE="${TMP_DIR}/amazon-ipv4.txt"
 TMP_IPv6_FILE="${TMP_DIR}/amazon-ipv6.txt"
 
-TARGET_DIR="aws"
+TARGET_DIR="amazon"
 IPv4_TARGET_FILE="${TARGET_DIR}/amazon-ipv4.txt"
 IPv6_TARGET_FILE="${TARGET_DIR}/amazon-ipv6.txt"
 
