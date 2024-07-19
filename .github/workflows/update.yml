@@ -27,4 +27,5 @@ jobs:
           commit_message: 'Apply automatic updates'
           commit_options: '--no-verify'
           repository: '.'
+          file_pattern: '*/*.txt'
           push_options: '--force'
