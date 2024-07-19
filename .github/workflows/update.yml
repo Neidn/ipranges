@@ -13,8 +13,17 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          ref: ${{ github.head_ref }}
 
       - name: Download IP ranges
         run: |
           set -x
           bash aws/download.sh
+
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Apply automatic updates'
+          commit_options: '--no-verify'
+          repository: '.'
+          push_options: '--force'
