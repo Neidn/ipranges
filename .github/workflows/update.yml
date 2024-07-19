@@ -21,11 +21,16 @@ jobs:
           set -x
           bash aws/download.sh
 
-      - name: Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'Apply automatic updates'
-          commit_options: '--no-verify'
-          repository: '.'
-          file_pattern: '*/*.txt'
-          push_options: '--force'
+      - name: Check for changes
+        run: |
+          set -x
+          git diff --exit-code || git commit -am "Update IP ranges" && git push
+
+#      - name: Auto Commit
+#        uses: stefanzweifel/git-auto-commit-action@v5
+#        with:
+#          commit_message: 'Apply automatic updates'
+#          commit_options: '--no-verify'
+#          repository: '.'
+#          file_pattern: '*/*.txt'
+#          push_options: '--force'
