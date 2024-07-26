@@ -22,6 +22,7 @@ jobs:
           bash amazon/download.sh
           bash digitalocean/download.sh
           bash cloudflare/download.sh
+          bash vultr/download.sh
 
       - name: Set env current date
         run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
