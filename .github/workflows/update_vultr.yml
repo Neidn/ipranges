@@ -1,4 +1,4 @@
-name: Update All IP Ranges
+name: Update Vultr IP Ranges
 
 on:
   push:
@@ -19,9 +19,6 @@ jobs:
       - name: Download IP ranges
         run: |
           set -x
-          bash amazon/download.sh
-          bash digitalocean/download.sh
-          bash cloudflare/download.sh
           bash vultr/download.sh
 
       - name: Set env current date
