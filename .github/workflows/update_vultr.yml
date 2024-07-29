@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Download IP ranges
-        run: |
+        run: | 
           set -x
           bash vultr/download.sh
 
