@@ -11,19 +11,21 @@ This project also saves the ipranges with CIDR format in the txt file.
 git clone [this repo](https://www.github.com/Neidn/ipragnes)
 ```
 
+## Build Results
+
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_amazon.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_cloudflare.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_digitalocean.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_vultr.yml/badge.svg)
+
 ## Data Sources
 
-* Amazon Web Services (
-  AWS) - (https://github.com/Neidn/ipranges/actions/workflows/update_amazon.yml/badge.svg)
-    * https://ip-ranges.amazonaws.com/ip-ranges.json
-* Cloudflare - (https://github.com/Neidn/ipranges/actions/workflows/update_cloudflare.yml/badge.svg)
+* Amazon Web Services (AWS) - https://ip-ranges.amazonaws.com/ip-ranges.json
+* Cloudflare
     * IPv4 - https://www.cloudflare.com/ips-v4
     * IPv6 - https://www.cloudflare.com/ips-v6
-* DigitalOcean (
-  DO) - (https://github.com/Neidn/ipranges/actions/workflows/update_digitalocean.yml/badge.svg)
-    * https://digitalocean.com/geo/google.csv
-* Vultr - (https://github.com/Neidn/ipranges/actions/workflows/update_vultr.yml/badge.svg)
-    * https://geofeed.constant.com/?text
+* DigitalOcean (DO) - https://digitalocean.com/geo/google.csv
+* Vultr - https://geofeed.constant.com/?text
 
 ## To Do
 
