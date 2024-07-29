@@ -8,7 +8,7 @@ This project also saves the ipranges with CIDR format in the txt file.
 ## Installation
 
 ```bash
-git clone [this repo](https://www.github.com/Neidn/ipragnes)
+git clone https://www.github.com/Neidn/ipragnes
 ```
 
 ## Build Results
