@@ -1,4 +1,4 @@
-name: Update Amazon IP Ranges
+name: Build
 
 on:
   schedule:
