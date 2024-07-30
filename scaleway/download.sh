@@ -3,19 +3,19 @@
 set -exuo pipefail
 set -x
 
-DIGITAL_OCEAN_URL="https://www.digitalocean.com/geo/google.csv"
+SCALEWAY_URL="https://raw.githubusercontent.com/scaleway/docs-content/main/console/account/reference-content/scaleway-network-information.mdx"
 
 TMP_DIR="$(mktemp -d)"
-TMP_FILE="${TMP_DIR}/digitalocean.csv"
-TMP_IPv4_FILE="${TMP_DIR}/digitalocean-ipv4.txt"
-TMP_IPv6_FILE="${TMP_DIR}/digitalocean-ipv6.txt"
+TMP_FILE="${TMP_DIR}/scaleway.mdx"
+TMP_IPv4_FILE="${TMP_DIR}/scaleway-ipv4.txt"
+TMP_IPv6_FILE="${TMP_DIR}/scaleway-ipv6.txt"
 
-TARGET_DIR="digitalocean"
-IPv4_TARGET_FILE="${TARGET_DIR}/digitalocean-ipv4.txt"
-IPv6_TARGET_FILE="${TARGET_DIR}/digitalocean-ipv6.txt"
+TARGET_DIR="scaleway"
+IPv4_TARGET_FILE="${TARGET_DIR}/scaleway-ipv4.txt"
+IPv6_TARGET_FILE="${TARGET_DIR}/scaleway-ipv6.txt"
 
 # Download the CSV file
-curl -s "${DIGITAL_OCEAN_URL}" | cut -d, -f1 > "${TMP_FILE}"
+curl -s "${SCALEWAY_URL}" | grep '*' | cut -d "\`" -f2 > "${TMP_FILE}"
 
 # Extract the IPv4 and IPv6 addresses
 grep -E '\b((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\/(3[0-2]|[12]?[0-9])?\b' "${TMP_FILE}" > "${TMP_IPv4_FILE}"

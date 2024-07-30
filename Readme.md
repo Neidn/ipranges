@@ -17,6 +17,7 @@ git clone https://www.github.com/Neidn/ipragnes
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_cloudflare.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_digitalocean.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_vultr.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_scaleway.yml/badge.svg)
 
 ## Data Sources
 
@@ -26,6 +27,7 @@ git clone https://www.github.com/Neidn/ipragnes
     * IPv6 - https://www.cloudflare.com/ips-v6
 * DigitalOcean (DO) - https://digitalocean.com/geo/google.csv
 * Vultr - https://geofeed.constant.com/?text
+* Scaleway - https://www.scaleway.com/en/docs/console/account/reference-content/scaleway-network-information/
 
 ## To Do
 
