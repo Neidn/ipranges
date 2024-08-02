@@ -18,6 +18,7 @@ git clone https://www.github.com/Neidn/ipragnes
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_digitalocean.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_vultr.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_scaleway.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_oracle.yml/badge.svg)
 
 ## Data Sources
 
