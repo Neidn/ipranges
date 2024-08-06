@@ -1,0 +1,33 @@
+name: Google
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Download IP ranges
+        run: |
+          set -x
+          bash google/download.sh
+
+      - name: Set env current date
+        run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Apply automatic updates: ${{ env.NOW }}"
+          commit_options: "--no-verify"
+          repository: "."
+          file_pattern: "*/*.txt"
+          push_options: "--force"

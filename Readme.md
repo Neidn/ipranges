@@ -30,11 +30,11 @@ git clone https://www.github.com/Neidn/ipragnes
 * Vultr - https://geofeed.constant.com/?text
 * Scaleway - https://www.scaleway.com/en/docs/console/account/reference-content/scaleway-network-information/
 * Oracle Cloud Infrastructure (OCI) - https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
+* Google Cloud Platform (GCP) - https://www.gstatic.com/ipranges/cloud.json
 
 ## To Do
 
 * Add more cloud providers
-    * Google Cloud Platform (GCP)
     * Microsoft Azure
     * IBM Cloud
     * Alibaba Cloud
