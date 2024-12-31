@@ -19,6 +19,7 @@ git clone https://www.github.com/Neidn/ipragnes
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_vultr.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_scaleway.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_oracle.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_ovh.yml/badge.svg)
 
 ## Data Sources
 
@@ -31,6 +32,7 @@ git clone https://www.github.com/Neidn/ipragnes
 * Scaleway - https://www.scaleway.com/en/docs/console/account/reference-content/scaleway-network-information/
 * Oracle Cloud Infrastructure (OCI) - https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
 * Google Cloud Platform (GCP) - https://www.gstatic.com/ipranges/cloud.json
+* OVH Cloud - https://rest.db.ripe.net/search?source=ripe&query-string=OVH
 
 ## To Do
 
@@ -41,4 +43,3 @@ git clone https://www.github.com/Neidn/ipragnes
     * Tencent Cloud
     * Baidu Cloud
     * Huawei Cloud
-    * OVH Cloud
