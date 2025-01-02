@@ -32,7 +32,7 @@ git clone https://www.github.com/Neidn/ipragnes
 * Scaleway - https://www.scaleway.com/en/docs/console/account/reference-content/scaleway-network-information/
 * Oracle Cloud Infrastructure (OCI) - https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
 * Google Cloud Platform (GCP) - https://www.gstatic.com/ipranges/cloud.json
-* OVH Cloud - https://rest.db.ripe.net/search?source=ripe&query-string=OVH
+* OVH Cloud - https://rest.db.ripe.net/search?inverse-attribute=origin&source=ripe&query-string=AS16276
 
 ## To Do
 
