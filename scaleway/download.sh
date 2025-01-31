@@ -3,7 +3,7 @@
 set -exuo pipefail
 set -x
 
-SCALEWAY_URL="https://raw.githubusercontent.com/scaleway/docs-content/main/console/account/reference-content/scaleway-network-information.mdx"
+SCALEWAY_URL="https://www.scaleway.com/en/docs/account/reference-content/scaleway-network-information/"
 
 TMP_DIR="$(mktemp -d)"
 TMP_FILE="${TMP_DIR}/scaleway.mdx"
@@ -15,7 +15,7 @@ IPv4_TARGET_FILE="${TARGET_DIR}/scaleway-ipv4.txt"
 IPv6_TARGET_FILE="${TARGET_DIR}/scaleway-ipv6.txt"
 
 # Download the CSV file
-curl -s "${SCALEWAY_URL}" | grep '*' | cut -d "\`" -f2 > "${TMP_FILE}"
+curl -s -H "Content-Type: multipart/form-data" "${SCALEWAY_URL}" | sed -n 's/.*<code[^>]*>\([^<]*\)<\/code>.*/\1/p' > "${TMP_FILE}"
 
 # Extract the IPv4 and IPv6 addresses
 grep -E '\b((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\/(3[0-2]|[12]?[0-9])?\b' "${TMP_FILE}" > "${TMP_IPv4_FILE}"
