@@ -20,6 +20,8 @@ git clone https://www.github.com/Neidn/ipragnes
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_scaleway.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_oracle.yml/badge.svg)
 ![Result](https://github.com/Neidn/ipranges/actions/workflows/update_ovh.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_claude.yml/badge.svg)
+![Result](https://github.com/Neidn/ipranges/actions/workflows/update_chatgpt.yml/badge.svg)
 
 ## Data Sources
 
@@ -33,6 +35,10 @@ git clone https://www.github.com/Neidn/ipragnes
 * Oracle Cloud Infrastructure (OCI) - https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
 * Google Cloud Platform (GCP) - https://www.gstatic.com/ipranges/cloud.json
 * OVH Cloud - https://rest.db.ripe.net/search?inverse-attribute=origin&source=ripe&query-string=AS16276
+* Claude (Anthropic) - https://platform.claude.com/docs/en/api/ip-addresses
+* ChatGPT (OpenAI)
+    * Connectors - https://openai.com/chatgpt-connectors.json
+    * Agents - https://openai.com/chatgpt-agents.json
 
 ## To Do
 
